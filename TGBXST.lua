@@ -35,11 +35,21 @@ local Tab = Window:Tab({
     Icon = "bird", -- optional
     Locked = false,
 })
+local Tab = Window:Tab({
+    Title = "忍者传奇",
+    Icon = "bird", -- optional
+    Locked = false,
+})
 local Button = Tab:Button({
-    Title = "Button",
-    Desc = "Test Button",
+    Title = "自动刷忍力(半全自动)",
+    Desc = "忍者传奇",
     Locked = false,
     Callback = function()
-    https://raw.githubusercontent.com/CN-ZX114514/TGBX-ST/refs/heads/main/TGBXfeet
+loadstring(game:HttpGet("https://github.com/CN-ZX114514/TGBX-ST/blob/main/TGBXfeet"))()
     end
+})
+local Tab = Window:Tab({
+    Title = "速度传奇",
+    Icon = "bird", -- optional
+    Locked = false,
 })
