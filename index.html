@@ -68,6 +68,66 @@
         }, 2000);
       });
     }
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+      padding: 40px;
+    }
+    .container {
+      background: #fff;
+      padding: 24px 36px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .copy-box {
+      background: #f0f4f8;
+      border: 1px solid #d1d5da;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 14px;
+      color: #2d3748;
+      font-size: 18px;
+      position: relative;
+      word-break: break-all;
+    }
+    button.copy-btn {
+      background: #3182ce;
+      color: #fff;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+    button.copy-btn:hover {
+      background: #2563eb;
+    }
+    .copied-tip {
+      color: #16a34a;
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>TGBX脚本更新日志</h2>
+    <h1>1.0.0BA</h1>
+  <script>
+    function copyContent() {
+      const text = document.getElementById('copyText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        document.getElementById('copiedTip').style.display = 'block';
+        setTimeout(()=> {
+          document.getElementById('copiedTip').style.display = 'none';
+        }, 2000);
+      });
   </script>
 </body>
 </html>
